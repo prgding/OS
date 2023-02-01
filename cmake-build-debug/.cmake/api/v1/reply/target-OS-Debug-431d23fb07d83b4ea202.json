@@ -92,7 +92,10 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -107,6 +110,21 @@
 		{
 			"backtrace" : 1,
 			"path" : "thread.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "monte_carlo.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "monte_carlo_multitasks.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "monte_carlo_multithreads.h",
 			"sourceGroupIndex" : 1
 		}
 	],
