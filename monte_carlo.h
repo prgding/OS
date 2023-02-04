@@ -8,7 +8,6 @@ int intervals = 1000;
 
 int monte_carlo() {
     clock_t start, delta;
-    double time_used;
     start = clock();
 
     srand(time(NULL));

@@ -19,7 +19,7 @@ void *world(void *arg) {
 
 int thread() {
     srand(time(NULL));
-    pthread_t tid,tid2;
+    pthread_t tid, tid2;
 
     pthread_create(&tid, NULL, hello, NULL);
     pthread_create(&tid2, NULL, world, NULL);
@@ -27,7 +27,7 @@ int thread() {
     pthread_join(tid, NULL);
     pthread_join(tid2, NULL);
 
-    printf("In main thread(%d) \n",value);
+    printf("In main thread(%d) \n", value);
 
     return 0;
 
