@@ -2,10 +2,12 @@
 #include <pthread.h>
 #include <unistd.h>
 
-int ticketAmount = 2;
+#define TICKET_AMOUNT 2
+
+int ticketAmount = TICKET_AMOUNT;
 
 void *ticketAgent(void *arg) {
-    int t = ticketAmount;
+    int t = TICKET_AMOUNT;
 
     printf("One ticket sold!\n");
     t--;
@@ -17,11 +19,11 @@ void *ticketAgent(void *arg) {
 int ticket() {
     pthread_t ticketAgent_tid[2];
 
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < TICKET_AMOUNT; ++i) {
         pthread_create(ticketAgent_tid + i, NULL, ticketAgent, NULL);
     }
 
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < TICKET_AMOUNT; ++i) {
         pthread_join(ticketAgent_tid[i], NULL);
     }
 

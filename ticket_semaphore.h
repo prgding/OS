@@ -23,7 +23,7 @@ void *ticketAgent(void *arg) {
 }
 
 
-int ticket_semaphore() {
+int ticket_semaphore(){
     mutex = sem_open("/semaphore_example", O_CREAT, 0666, 1);
 
     pthread_t ticketAgent_tid[2];

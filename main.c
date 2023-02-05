@@ -1,5 +1,5 @@
-#include "ticket_semaphore.h"
+#include "car_semaphore.h"
 
 int main() {
-    ticket_semaphore();
+    car_semaphore();
 }
