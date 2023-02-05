@@ -11,7 +11,9 @@ sem_t *road;
 void *cross(void *argc) {
     printf("(%u) Waiting\n", pthread_self());
     sem_wait(road);
+    sleep(1);
     printf("(%u) Crossing\n", pthread_self());
+    sleep(1);
     printf("(%u) Crossed\n", pthread_self());
     sem_post(road);
 
